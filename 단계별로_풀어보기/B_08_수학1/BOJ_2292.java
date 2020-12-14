@@ -20,7 +20,7 @@ public class BOJ_2292 {
 		// 38 ~ 61 : 5 (24개)
 		// ...생략..
 		// a(n) = a(n-1) + 6(n-1) | a(n): 첫 항
-		if(n == 1) return 1;
+		
 		int i=2;
 		int k=1;
 		
