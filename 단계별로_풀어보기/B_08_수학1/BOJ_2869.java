@@ -14,18 +14,9 @@ public class BOJ_2869 {
 		a = Integer.parseInt(st.nextToken());
 		b = Integer.parseInt(st.nextToken());
 		v = Integer.parseInt(st.nextToken());
-
-		int halfDay = 0, distance = 0;
-		while (distance < v) {
-			if (halfDay % 2 == 0) {
-				distance += a;
-			} else {
-				distance -= b;
-			}
-			halfDay++;
-		}
-		System.out.println((int) Math.ceil(halfDay / 2.0));
+		
+		System.out.println((int) Math.ceil((double)(v - a) / (a - b)) + 1);
 
 	}
-
+	
 }
