@@ -8,15 +8,22 @@ import java.util.StringTokenizer;
 public class BOJ_2869 {
 
 	public static void main(String[] args) throws IOException {
-		int a, b, v;
+		double[] arr;
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		a = Integer.parseInt(st.nextToken());
-		b = Integer.parseInt(st.nextToken());
-		v = Integer.parseInt(st.nextToken());
+		arr = toDouble(st);
 		
-		System.out.println((int) Math.ceil((double)(v - a) / (a - b)) + 1);
+		System.out.println((int) Math.ceil((arr[2] - arr[0]) / (arr[0] - arr[1])) + 1);
 
+	}
+	
+	private static double[] toDouble(StringTokenizer st) {
+		double[] arr = new double[st.countTokens()];
+		int iter = st.countTokens();
+		for(int i = 0; i<iter; i++) {
+			arr[i]=Double.parseDouble(st.nextToken());
+		}
+		return arr;
 	}
 	
 }
