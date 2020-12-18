@@ -12,19 +12,24 @@ public class BOJ_2775 {
 		int floor;
 		int roomNum;
 		StringBuilder sb = new StringBuilder();
-		while(t-- >0) {
+		int[][] apt = new int[15][15];
+		for (int i = 0; i < 15; i++) {
+			apt[i][1] = 1;
+		}
+		for (int i = 0; i < 15; i++) {
+			apt[0][i] = i;
+		}
+		for (int i = 1; i < 15; i++) {
+			for (int j = 1; j < 15; j++) {
+				apt[i][j] = apt[i - 1][j] + apt[i][j - 1];
+			}
+		}
+		while (t-- > 0) {
 			floor = Integer.parseInt(br.readLine());
 			roomNum = Integer.parseInt(br.readLine());
-			sb.append(getNum(floor, roomNum)+"\n");
+			sb.append(apt[floor][roomNum] + "\n");
 		}
 		System.out.print(sb);
-	}
-	public static int getNum(int a, int b) {
-		if(b==1)
-			return 1;
-		if(a==0)
-			return b;
-		return (getNum(a-1, b)+getNum(a, b-1));
 	}
 
 }
