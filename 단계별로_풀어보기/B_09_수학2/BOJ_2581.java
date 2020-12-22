@@ -25,9 +25,11 @@ public class BOJ_2581 {
 			System.out.printf("%d\n%d", sum, min);
 		}
 	}
+
 	public static boolean check(int a) {
 		boolean flag = false;
-		if (a==1) flag = true;
+		if (a == 1)
+			flag = true;
 		for (int i = 2; i <= Math.sqrt(a); i++) {
 			if (a % i == 0) {
 				flag = true;
