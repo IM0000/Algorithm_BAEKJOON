@@ -23,7 +23,7 @@ public class BOJ_1929 {
 		}
 		System.out.print(sb.toString().trim());
 	}
-
+	
 	public static boolean[] isPrimeNumber(int n) {
 		boolean[] check= new boolean[n+1];
 		for (int i =2; i<=n; i++) {
@@ -37,9 +37,7 @@ public class BOJ_1929 {
 		return check;
 	}
 }
-
 //첫번째 풀이
-
 //import java.io.BufferedReader;
 //import java.io.IOException;
 //import java.io.InputStreamReader;
