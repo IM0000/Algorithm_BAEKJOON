@@ -6,7 +6,8 @@ public class test {
 		int a[]=new int[100];
 		Child c = new Child();
 		Parent p = new Parent();
-		System.out.println(Parent.age);
+		Child d = (Child)p;
+		System.out.println(c instanceof Parent);
 		System.out.println(a[2]);
 		
 	}
