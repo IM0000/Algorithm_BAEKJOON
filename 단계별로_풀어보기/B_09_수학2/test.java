@@ -6,9 +6,9 @@ public class test {
 		int a[]=new int[100];
 		Child c = new Child();
 		Parent p = new Parent();
-		Child d = (Child)p;
+//		Child d = (Child)p;
 		System.out.println(c instanceof Parent);
-		System.out.println(a[2]);
+		System.out.println(Math.sqrt(5));
 		
 	}
 	
