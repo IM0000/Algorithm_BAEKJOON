@@ -1,5 +1,7 @@
 package B_09_수학2;
 
+import java.util.Calendar;
+
 public class test {
 
 	public static void main(String[] args) {
@@ -7,8 +9,9 @@ public class test {
 		Child c = new Child();
 		Parent p = new Parent();
 //		Child d = (Child)p;
-		System.out.println(c instanceof Parent);
-		System.out.println(Math.sqrt(5));
+//		System.out.println(c instanceof Parent);
+		Calendar today = Calendar.getInstance();
+		System.out.println(today.get(3));
 		
 	}
 	
