@@ -56,11 +56,19 @@ public class test {
 			System.out.println(con);
 		}
 		System.out.println();
-
+		test ttt = new test();
+		ttt.printHello();
 //		java.lang.reflect.Method[] methods = c3.getMethods();
 //		for (java.lang.reflect.Method method : methods) {
 //			System.out.println(method);
 //		}
+	}
+	void printHello() {
+		System.out.println("hello");
+		printBye();
+	}
+	void printBye() {
+		System.out.println("bye");
 	}
 
 }
@@ -71,7 +79,7 @@ class Parent {
 
 class Child extends Parent {
 	int age = 1;
-
+	Thread t = new Thread();
 	@Deprecated
 	void parentMethod() {
 		System.out.println("deprecated use");
