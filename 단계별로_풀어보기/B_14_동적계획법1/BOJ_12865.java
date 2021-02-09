@@ -22,7 +22,12 @@ public class BOJ_12865 {
 		}
 		System.out.println(go(0,0));
 		
-		
+		/*
+		 * for(int i =0; i<N; i++){
+		 * 	for(int j = K; j-W[i]>=0; j--)
+		 * 		if(dp[j-W[i] != -1) dp[j] = max(dp[j], dp[j-W[i]] +V[i]);
+		 * }
+		 * */
 	}
 	public static int go(int i, int w) {
 		if(dp[i][w] !=0) return dp[i][w];
